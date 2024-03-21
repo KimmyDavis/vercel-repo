@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Developer Davis</h1>
+        <nav>
+          <a href="#contacts" class="contact">Contact me</a>
+          <a
+            href="https://developerdavis.netlify.app"
+            target="_blank"
+            class="contact"
+            >My projects</a
+          >
+        </nav>
+      </header>
+      <aside>
+        <section class="aside-stuff">
+          <h2>Keep time</h2>
+          <p>
+            This is a gift that I received from a friend #Klein_Clive. Thanks
+            bro!
+          </p>
+          <div class="clock">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center-circle"></div>
+          </div>
+          <p>
+            Sorry this is limited to large screens But you can turn on desktop
+            mode in you mobile device to see it.
+          </p>
+        </section>
+      </aside>
+      <main>
+        <div class="personal">
+          <p>Hey I'm Davis, a fullstack developer</p>
+          <div class="stacks">
+            <h2>My stacks</h2>
+            <ul>
+              <li>MERN</li>
+              <li>PHP-Mysql</li>
+            </ul>
+          </div>
+          <h2>Technologies</h2>
+          <ol class="techs">
+            <li>
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>React</li>
+                <li>jQuery</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Backend</h3>
+              <ul>
+                <li>Node.js</li>
+                <li>express js</li>
+                <li>ejs</li>
+                <li>Mongoose</li>
+                <li>PHP</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Databases</h3>
+              <ul>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>Firebase</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <section class="css-stuff">
+          <h2>How about a little bit of CSS?</h2>
+          <p>In here we gonna have some pics of me and the boys...</p>
+          <div class="css-projects">
+            <div class="css-project">
+              <h3>You could build a lil' gallery you know</h3>
+              <p>Where pics move én move én....</p>
+              <div class="album">
+                <img src="images/images(1).jfif" alt="one" />
+                <img src="images/images(2).jfif" alt="two" />
+                <img src="images/images(3).jfif" alt="three" />
+                <img src="images/images(4).jfif" alt="four" />
+              </div>
+            </div>
+            <div class="css-project">
+              <h3>You could make it interactive too</h3>
+              <p>Have a closer look at each pic by hovering or clicking</p>
+              <div class="pie">
+                <img src="images/images(1).jfif" alt="one" />
+                <img src="images/images(2).jfif" alt="two" />
+                <img src="images/images(3).jfif" alt="three" />
+                <img src="images/images(4).jfif" alt="four" />
+              </div>
+            </div>
+            <div class="css-project">
+              <h3>
+                You could do a sneak peek too... You know.. not the entire thing
+              </h3>
+              <p>Again hover or click what you wanna see</p>
+              <div class="box">
+                <img src="images/images(1).jfif" alt="one" />
+                <img src="images/images(3).jfif" alt="two" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="external-link">
+          <h2>External link</h2>
+          <p>
+            I'm ma miss you when you leave but you can still checkout some more
+            of my projects... Spoiler alert! JavaScript is involved.
+          </p>
+          <p>
+            Find more stuff at
+            <a href="https://developerdavis.netlify.app" target="_blank">
+              my projects</a
+            >
+          </p>
+        </div>
+        <div class="comments" id="comments">
+          <h2>Leave a comment</h2>
+          <p>
+            You can let others know about what you think of my work and advise
+            on where I could have done better.
+          </p>
+
+          <div class="comments-available">
+            <% if(comments){ %> <% comments.forEach(comment => { %>
+            <div class="comment">
+              <h3><%= comment.commenterName %></h3>
+              <p><%= comment.commentBody %></p>
+            </div>
+            <% }) %> <% } %>
+          </div>
+          <form action="/add-comment" method="post">
+            <input
+              name="commenterName"
+              type="text"
+              id="name"
+              placeholder="Your name"
+              required
+            />
+            <textarea
+              name="commentBody"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Write your comment here"
+              required
+            ></textarea>
+            <input type="submit" value="Add comment" />
+          </form>
+        </div>
+
+        <div class="contacts" id="contacts">
+          <h2>Contact me</h2>
+          <p>
+            If you have any questions or want to get in touch with me, feel free
+            to contact me at
+          </p>
+          <div class="handles">
+            <div class="handle">
+              <span>Tell</span>
+              <a href="Tel:+256753460522">+256 753 460522</a>
+            </div>
+            <div class="handle">
+              <span>Whatsapp</span>
+              <a href="https://wa.me/+256753460522"> +256 753 460522</a>
+            </div>
+            <div class="handle">
+              <span>Email</span>
+              <a href="mailto:kimdhev@gmail.com"> kimdhev@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p class="copyright">&copy; Davis 2024</p>
+        <div class="social">
+          <a href="Tel:+256753460522"
+            ><img src="images/dialer.png" alt="tel" /></a
+          ><a href="https://wa.me/+256753460522"
+            ><img src="images/whatsapp.png" alt="whatsapp" /></a
+          ><a href="mailto:kimdhev@gmail.com"
+            ><img src="images/gmail.png" alt="gmail"
+          /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

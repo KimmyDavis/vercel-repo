@@ -45,6 +45,7 @@ header {
   display: flex;
   justify-content: end;
   align-items: center;
+  border-bottom: double 3px var(--blue-darkest);
 
   &:before {
     content: "";
@@ -206,6 +207,7 @@ main {
     }
   }
   & .comments {
+    padding: 0 10px;
     & form {
       display: flex;
       flex-direction: column;
@@ -214,7 +216,8 @@ main {
       & input,
       & textarea {
         background: var(--blue-dark);
-        color: var(--blue-darkest);
+        background: color-mix(in srgb, var(--blue-dark), transparent 10%);
+        color: white;
         border-radius: 10px;
         padding: 10px;
         outline: none;
@@ -224,10 +227,13 @@ main {
         }
         &[type="submit"] {
           width: 30%;
+          padding: 5px;
           align-self: end;
           color: var(--blue-lightest);
           font-weight: 600;
           cursor: pointer;
+          font-size: 0.9em;
+          text-wrap: wrap;
         }
       }
     }
@@ -235,7 +241,7 @@ main {
       padding: 50px 0;
 
       & .comment {
-        margin: 10px 0;
+        margin: 10px 30px;
         border: 1px dotted var(--blue-mid);
         padding: 20px;
         border-radius: 20px 5px;
@@ -306,7 +312,7 @@ footer {
       }
 
       &:before {
-        z-index: 3;
+        display: none;
       }
     }
 
@@ -314,14 +320,21 @@ footer {
       position: relative;
       top: 150px;
       z-index: 4;
-    }
-
-    & main {
       padding: 0 10px;
     }
 
     & aside {
-      display: none;
+      background-color: transparent;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      & p,
+      & h2,
+      &:before,
+      &:after {
+        display: none;
+      }
     }
     & footer {
       position: fixed;

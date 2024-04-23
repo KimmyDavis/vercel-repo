@@ -1,14 +1,12 @@
 {
-  "name": "folio",
-  "version": "1.0.0",
+  "name": "css-portfolio",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "engines": {"node": "18.x"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js",
-    "build": "node build --output public"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",

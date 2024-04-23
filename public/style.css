@@ -234,6 +234,7 @@ main {
           cursor: pointer;
           font-size: 0.9em;
           text-wrap: wrap;
+          transform: translateX(-25%);
         }
       }
     }
@@ -309,7 +310,7 @@ footer {
       z-index: 5;
       & h1 {
         margin-left: 5px;
-        font-size: 0.9em;
+        font-size: 1.3em;
       }
 
       &:before {

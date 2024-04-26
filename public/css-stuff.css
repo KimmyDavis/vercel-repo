@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  & > p {
+    width: 80%;
+  }
 }
 .css-projects {
   margin-top: 50px;

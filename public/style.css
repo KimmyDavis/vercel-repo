@@ -208,6 +208,7 @@ main {
   }
   & .comments {
     padding: 0 10px;
+    max-width: 100vw;
     & > h2 {
       padding-left: 20px;
     }
